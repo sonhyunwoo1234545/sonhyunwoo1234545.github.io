@@ -23,7 +23,7 @@
     </nav>
 
     <section id="hero" class="full-section">
-        <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <div class="hero-wrapper">
                 <div class="profile-img">
                     <img src="myface.jpg" alt="손현우 사진">
@@ -38,49 +38,47 @@
     </section>
 
     <section id="skills" class="full-section bg-dark">
-        <div class="container" data-aos="fade-right">
+        <div class="container" data-aos="fade-up">
             <h2 class="section-heading">TECHNICAL SPECIALTY</h2>
-            <div class="skill-focus">
-                <div class="skill-box">
-                    <span class="skill-label">EXPERTISE</span>
-                    <h3>DATABASE & SQL</h3>
-                    <p>데이터의 흐름을 설계하고 효율적인 쿼리를 작성하는 데 자부심이 있습니다.</p>
-                    <ul class="skill-list">
-                        <li># Query_Optimization</li>
-                        <li># DB_Schema_Design</li>
-                        <li># Data_Analysis</li>
-                    </ul>
-                </div>
+            <div class="skill-box">
+                <span class="skill-label">EXPERTISE</span>
+                <h3>DATABASE & SQL</h3>
+                <p>데이터의 흐름을 설계하고 효율적인 쿼리를 작성하는 데 자부심이 있습니다.</p>
+                <ul class="skill-list">
+                    <li># Query_Optimization</li>
+                    <li># DB_Schema_Design</li>
+                    <li># Data_Analysis</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="projects" class="full-section">
-        <div class="container">
-            <h2 class="section-heading" data-aos="fade-left">FEATURED PROJECTS</h2>
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-heading">FEATURED PROJECTS</h2>
             <div class="project-grid">
-                <article class="p-card" data-aos="flip-left">
+                <article class="p-card">
                     <span class="p-tag">UI/UX & DB</span>
                     <h4>유기견 보호소 시스템</h4>
-                    <p>사용자 친화적 화면 설계 및 체계적인 DB 아키텍처 구축 프로젝트</p>
+                    <p>사용자 친화적 화면 설계 및 체계적인 DB 아키텍처 구축</p>
                 </article>
-                <article class="p-card" data-aos="flip-left" data-aos-delay="200">
+                <article class="p-card">
                     <span class="p-tag">AI Research</span>
                     <h4>LLM 멀티에이전트 연구</h4>
-                    <p>대규모 언어 모델을 활용한 지능형 에이전트 시스템 및 데이터 처리 연구</p>
+                    <p>지능형 에이전트 시스템 및 데이터 처리 로직 연구</p>
                 </article>
             </div>
         </div>
     </section>
 
     <section id="personal" class="full-section bg-dark">
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
             <h2 class="section-heading">PERSONAL INFO</h2>
             <div class="personal-details">
-                <div class="info-row"><span>Age</span> <strong>[나이 입력]</strong></div>
-                <div class="info-row"><span>Hobby</span> <strong>데이터 탐색, 코딩, [취미 입력]</strong></div>
-                <div class="info-row"><span>Family</span> <strong>[가족관계 입력]</strong></div>
-                <div class="info-row"><span>Vision</span> <strong>"데이터로 세상을 연결하고 가치를 창출합니다."</strong></div>
+                <div class="info-row"><span>Age</span> <strong>[나이]</strong></div>
+                <div class="info-row"><span>Hobby</span> <strong>데이터 탐색, 코딩, [취미]</strong></div>
+                <div class="info-row"><span>Family</span> <strong>[가족관계]</strong></div>
+                <div class="info-row"><span>Vision</span> <strong>"데이터로 가치를 창출합니다."</strong></div>
             </div>
         </div>
     </section>
@@ -88,3 +86,16 @@
     <footer class="footer">
         <p>© 2026 Son Hyun Woo. All rights reserved.</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 초기화 설정을 가장 안전하게 변경했습니다.
+        AOS.init({
+            duration: 1000,
+            once: true, // 한 번만 실행되게 하여 깜빡임 방지
+            offset: 0,   // 바로 보이게 설정
+            delay: 100   // 약간의 지연 후 등장
+        });
+    </script>
+</body>
+</html>
