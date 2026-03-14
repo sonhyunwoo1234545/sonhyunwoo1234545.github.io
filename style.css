@@ -1,3 +1,4 @@
+/* 색상 변수 설정 */
 :root {
     --black: #000000;
     --dark-gray: #111111;
@@ -6,76 +7,199 @@
     --gray: #888888;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-/* 배경 및 스크롤 스냅 설정 */
-body { 
-    background-color: var(--black); 
-    color: var(--white); 
-    font-family: 'Pretendard', sans-serif;
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.snap-container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory; /* 스크롤 시 섹션에 딱딱 걸리게 함 */
+/* 1. 브라우저 전체 스크롤 스냅 설정 */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
-.full-section {
-    height: 100vh; /* 각 섹션을 화면 꽉 차게 설정 */
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. 네비게이션 바 (고정) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
     display: flex;
     align-items: center;
-    scroll-snap-align: start; /* 섹션 시작점에 스냅 고정 */
-    padding: 0 5%;
+    border-bottom: 1px solid #222;
+}
+
+.nav-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.orange { color: var(--orange); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--orange); }
+
+/* 3. 각 섹션 공통 스타일 (화면 꽉 차게) */
+.full-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start; /* 스냅 고정 */
+    scroll-snap-stop: always;
+    padding-top: 80px;
 }
 
 .bg-dark { background-color: var(--dark-gray); }
 
-/* 네비게이션 바 */
-.navbar {
-    position: fixed;
-    top: 0; width: 100%; height: 80px;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(15px);
-    z-index: 1000;
-    display: flex; align-items: center;
-    border-bottom: 1px solid #222;
-}
-.nav-content { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 20px; }
-.logo { font-weight: 900; letter-spacing: 1px; }
-.orange { color: var(--orange); }
-.nav-links { list-style: none; display: flex; gap: 30px; }
-.nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
-
-/* 섹션 디자인 */
 .section-heading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--orange);
     letter-spacing: 4px;
-    margin-bottom: 50px;
-    position: relative;
+    margin-bottom: 40px;
+    font-weight: 800;
 }
 
-/* 히어로 디자인 */
-.hero-wrapper { display: flex; align-items: center; gap: 80px; }
-.profile-img { width: 250px; height: 320px; background: #222; border-radius: 30px; overflow: hidden; border: 2px solid var(--orange); }
-.profile-img img { width: 100%; height: 100%; object-fit: cover; }
-.hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin: 20px 0; }
+/* 4. 히어로 섹션 */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
 
-/* 전문분야 카드 */
-.skill-box { background: #1a1a1a; padding: 50px; border-radius: 40px; border-left: 8px solid var(--orange); }
-.skill-label { font-size: 0.8rem; color: var(--orange); font-weight: bold; }
+.profile-img {
+    width: 280px;
+    height: 350px;
+    background: #1a1a1a;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid var(--orange);
+    box-shadow: 0 10px 30px rgba(255, 77, 0, 0.2);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.tag { color: var(--orange); font-weight: bold; font-size: 1rem; }
+.desc { color: var(--gray); font-size: 1.2rem; }
+
+/* 5. 기술 섹션 (SQL) */
+.skill-box {
+    background: #1a1a1a;
+    padding: 50px;
+    border-radius: 40px;
+    border-left: 8px solid var(--orange);
+    width: 100%;
+}
+
+.skill-label { color: var(--orange); font-weight: bold; font-size: 0.8rem; }
 .skill-box h3 { font-size: 2.5rem; margin: 10px 0; }
-.skill-list { list-style: none; display: flex; gap: 15px; margin-top: 20px; color: var(--orange); font-weight: bold; }
+.skill-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    color: var(--orange);
+    font-weight: bold;
+}
 
-/* 프로젝트 카드 */
-.project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-.p-card { background: #1a1a1a; padding: 40px; border-radius: 30px; border: 1px solid #333; transition: 0.3s; }
-.p-card:hover { border-color: var(--orange); transform: translateY(-10px); }
+/* 6. 프로젝트 섹션 */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
 
-/* 개인 정보 테이블형 */
-.personal-details { background: #1a1a1a; padding: 40px; border-radius: 30px; }
-.info-row { display: flex; padding: 20px 0; border-bottom: 1px solid #333; }
+.p-card {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 35px;
+    border: 1px solid #333;
+    transition: 0.4s ease;
+}
+
+.p-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-10px);
+}
+
+.p-tag { color: var(--orange); font-size: 0.75rem; font-weight: bold; }
+.p-card h4 { font-size: 1.8rem; margin: 15px 0; }
+.p-card p { color: var(--gray); }
+
+/* 7. 개인 정보 섹션 */
+.personal-details {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 35px;
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+.info-row:last-child { border-bottom: none; }
 .info-row span { width: 150px; color: var(--gray); font-weight: bold; }
 .info-row strong { color: var(--white); font-size: 1.2rem; }
+
+/* 8. 푸터 */
+.footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 0.8rem;
+    scroll-snap-align: end;
+}
