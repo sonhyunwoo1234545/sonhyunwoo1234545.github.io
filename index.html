@@ -2,10 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | 손현우</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>
@@ -23,7 +21,7 @@
     </nav>
 
     <section id="hero" class="full-section">
-        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
             <div class="hero-wrapper">
                 <div class="profile-img">
                     <img src="myface.jpg" alt="손현우 사진">
@@ -38,12 +36,12 @@
     </section>
 
     <section id="skills" class="full-section bg-dark">
-        <div class="container" data-aos="fade-up">
+        <div class="container">
             <h2 class="section-heading">TECHNICAL SPECIALTY</h2>
             <div class="skill-box">
                 <span class="skill-label">EXPERTISE</span>
                 <h3>DATABASE & SQL</h3>
-                <p>데이터의 흐름을 설계하고 효율적인 쿼리를 공부했고 프론트엔드 기술을 접하고있습니다.</p>
+                <p>데이터의 흐름을 설계하고 효율적인 쿼리를 공부했고 프론트엔드 기술을 접하고 있습니다.</p>
                 <ul class="skill-list">
                     <li># Query_Optimization</li>
                     <li># DB_Schema_Design</li>
@@ -54,7 +52,7 @@
     </section>
 
     <section id="projects" class="full-section">
-        <div class="container" data-aos="fade-up">
+        <div class="container">
             <h2 class="section-heading">FEATURED PROJECTS</h2>
             <div class="project-grid">
                 <article class="p-card">
@@ -72,7 +70,7 @@
     </section>
 
     <section id="personal" class="full-section bg-dark">
-        <div class="container" data-aos="fade-up">
+        <div class="container">
             <h2 class="section-heading">PERSONAL INFO</h2>
             <div class="personal-details">
                 <div class="info-row"><span>Age</span> <strong>24</strong></div>
@@ -87,15 +85,5 @@
         <p>© 2026 Son Hyun Woo. All rights reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // 초기화 설정을 가장 안전하게 변경했습니다.
-        AOS.init({
-            duration: 1000,
-            once: true, // 한 번만 실행되게 하여 깜빡임 방지
-            offset: 0,   // 바로 보이게 설정
-            delay: 100   // 약간의 지연 후 등장
-        });
-    </script>
 </body>
 </html>
