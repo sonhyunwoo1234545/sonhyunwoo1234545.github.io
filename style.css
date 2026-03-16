@@ -1,4 +1,4 @@
-/* 기본 변수 및 색상 설정 */
+
 :root {
     --black: #000000;
     --dark-gray: #111111;
@@ -7,44 +7,40 @@
     --gray: #888888;
 }
 
-/* 모든 요소의 여백 초기화 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 전체 바탕 설정 */
 body {
     background-color: var(--black);
     color: var(--white);
     font-family: 'Pretendard', sans-serif;
     line-height: 1.6;
-    /* 핵심: 브라우저 창을 줄여도 1100px 밑으로는 찌그러지지 않게 방어합니다. */
     min-width: 1100px; 
 }
 
-/* 모든 내용을 감싸는 중앙 정렬 박스 */
+
 .container {
-    width: 1050px; /* 가로 크기를 1050px로 딱 고정! */
-    margin: 0 auto; /* 양옆 여백을 똑같이 나누어 가운데 정렬 */
+    width: 1050px; 
+    margin: 0 auto; 
     padding: 0 20px;
 }
 
-/* 상단 네비게이션 바 */
 .navbar {
-    position: fixed; /* 스크롤을 내려도 화면 위에 딱 붙어있게 합니다. */
+    position: fixed; 
     top: 0; 
     width: 100%; 
     height: 75px;
-    background: rgba(0, 0, 0, 0.9); /* 검은색에 살짝 투명도 */
+    background: rgba(0, 0, 0, 0.9); 
     border-bottom: 1px solid #222;
-    z-index: 100; /* 항상 다른 글씨들보다 위층에 떠 있게 설정 */
+    z-index: 100; 
 }
 
-/* 네비게이션 안쪽 글씨들 정렬 */
+
 .nav-content {
-    display: flex; /* 로고와 메뉴를 양옆으로 떨어뜨리기 위해 사용 */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -55,20 +51,20 @@ body {
 .nav-links { display: flex; list-style: none; gap: 25px; }
 .nav-links a { color: var(--white); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
 
-/* 공통 섹션 (각각의 큰 구역) */
+
 .full-section {
-    padding: 120px 0; /* 위아래 여백을 주어 답답하지 않게 합니다. */
+    padding: 120px 0; 
     width: 100%;
 }
 
 .bg-dark { background-color: var(--dark-gray); }
 .section-heading { color: var(--orange); letter-spacing: 3px; margin-bottom: 40px; font-size: 1.2rem; }
 
-/* 메인 소개 (사진과 글씨 나란히 두기) */
+
 .hero-wrapper { 
-    display: flex; /* 사진(왼쪽)과 글씨(오른쪽)를 나란히 배치 */
+    display: flex; 
     align-items: center; 
-    gap: 60px; /* 사진과 글씨 사이의 간격 */
+    gap: 60px; 
 }
 
 .profile-img { width: 280px; height: 350px; background: #1a1a1a; border-radius: 25px; border: 2px solid var(--orange); overflow: hidden; }
@@ -77,9 +73,9 @@ body {
 .tag { color: var(--orange); font-weight: bold; font-size: 1.1rem; }
 .desc { color: var(--gray); font-size: 1.1rem; }
 
-/* 기술 분야 박스 */
+
 .skill-box { 
-    width: 800px; /* 상자 가로 길이를 800px로 고정 */
+    width: 800px; 
     background: #1a1a1a; 
     padding: 40px; 
     border-radius: 25px; 
@@ -89,14 +85,14 @@ body {
 .skill-box h3 { font-size: 2.2rem; margin: 10px 0 20px 0; }
 .skill-list { display: flex; gap: 15px; margin-top: 25px; color: var(--orange); font-weight: bold; list-style: none; }
 
-/* 프로젝트 카드 2개 나란히 놓기 */
+
 .project-grid { 
-    display: flex; /* 2개의 카드를 가로로 배치 */
-    gap: 30px; /* 카드 사이 간격 */
+    display: flex; 
+    gap: 30px; 
 }
 
 .p-card { 
-    width: 480px; /* 카드 하나의 크기를 480px로 딱 고정 */
+    width: 480px; 
     background: #1a1a1a; 
     padding: 35px; 
     border-radius: 25px; 
@@ -106,9 +102,9 @@ body {
 .p-card h4 { font-size: 1.6rem; margin: 15px 0; }
 .p-card p { color: var(--gray); }
 
-/* 개인 정보 박스 */
+
 .personal-details { 
-    width: 800px; /* 상자 가로 길이를 800px로 고정 */
+    width: 800px; 
     background: #1a1a1a; 
     padding: 35px; 
     border-radius: 25px; 
@@ -117,6 +113,3 @@ body {
 .info-row:last-child { border-bottom: none; }
 .info-row span { width: 120px; color: var(--gray); font-weight: bold; }
 .info-row strong { color: var(--white); font-size: 1.1rem; }
-
-/* 맨 아래 푸터 */
-.footer { text-align: center; padding: 60px 20px; color: #555; font-size: 0.9rem; border-top: 1px solid #111; }
