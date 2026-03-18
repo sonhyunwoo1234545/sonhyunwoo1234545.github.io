@@ -61,3 +61,14 @@ h1 {
     font-size: 24px;
     word-break: keep-all;
 }
+
+.contact_item {
+    display: inline-block;
+    margin: 20px 40px;
+}
+
+.icon {
+    font-size: 50px;
+    color: #ff4d00;
+    margin-bottom: 15px;
+}
