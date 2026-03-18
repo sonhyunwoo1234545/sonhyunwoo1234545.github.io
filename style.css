@@ -64,7 +64,9 @@ h1 {
 
 .contact_item {
     display: inline-block;
-    margin: 20px 40px;
+    margin: 20px 15px;
+    width: 250px;
+    vertical-align: top;
 }
 
 .icon {
